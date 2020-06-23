@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<main class="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
+  <h1 class="mt0">
+    Import Data
+  </h1>
+
+  <div class="flex flex-column">
+    <form action="/import/" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form}}
+      <input
+        type="submit"
+        class="f6 link dim br3 ph3 pv2 mb2 dib white bg-black"
+        value="Import data"
+      />
+    </form>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
+  <h1 class=mt0>
+    Teacher's directory
+  </h1>
+
+  {% if messages %}
+  <ul class="messages">
+  {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  
+  <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-black" href="/import">Import data</a>
+
+  <section class="flex flex-wrap">
+  {% for teacher in teachers %}
+    
+    <a class="db center mw5 tc black link dim"
+      title="Frank Ocean's Blonde on Apple Music"
+      href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music">
+
+      <img class="db ba b--black-10"/
+          alt="{{teacher.first_name}}"
+          src="{% static teacher.profile_picture %}"
+      >
+
+      <dl class="mt2 f6 lh-copy">
+        <dt class="">{{teacher.first_name}} {{teacher.last_name}}</dt>
+        <dd class="ml0">{{teacher.email_address}}</dd>
+        <dd class="ml0">{{teacher.phone_number}}</dd>
+      </dl>
+    </a>
+  {% endfor %}
+  </section>
+
+</main>
+{% endblock %}
