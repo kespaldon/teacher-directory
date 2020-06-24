@@ -9,7 +9,7 @@
   ```python
   pipenv install
   
-  #initialize virtual environment
+  # initialize virtual environment
   pipenv shell
   
   #once inside,
