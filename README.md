@@ -12,7 +12,7 @@
   # initialize virtual environment
   pipenv shell
   
-  #once inside,
+  # once inside,
   pip install -r requirements.txt
   ```
   
