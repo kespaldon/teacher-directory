@@ -4,7 +4,13 @@
 
 1. Clone the repository
 
-2. Install pip virtual environment and dependencies
+2. Enter the directory
+
+  ```shell
+  cd teacher-directory
+  ```
+
+3. Install pip virtual environment and dependencies
   
   ```python
   pipenv install
@@ -16,12 +22,12 @@
   pip install -r requirements.txt
   ```
   
-3. Migrate
+4. Migrate
   ```python
   python manage.py migrate
   ```
   
-4. Run server
+5. Run server
   ```python
   python manage.py runserver
   ```
